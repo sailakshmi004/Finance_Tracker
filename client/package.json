@@ -21,6 +21,7 @@
     "@types/react-table": "^7.7.20",
     "@types/styled-components": "^5.1.34",
     "antd": "^5.20.6",
+    "build": "^0.1.4",
     "framer-motion": "^11.5.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.4",
@@ -41,6 +42,6 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "typescript": "^5.2.2",
-    "vite": "^5.2.0"
+    "vite": "^5.4.4"
   }
 }
