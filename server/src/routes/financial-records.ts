@@ -1,9 +1,9 @@
 import express, { Request, Response } from "express";
 import FinancialRecordModel from "../schema/financial-record";
 
-const router = express.Router();
+const app = express.Router();
 
-router.get("/getAllByUserID/:userId", async (req: Request, res: Response) => {
+app.get("/getAllByUserID/:userId", async (req: Request, res: Response) => {
   try {
     const userId = req.params.userId;
     const records = await FinancialRecordModel.find({ userId: userId });
@@ -16,7 +16,7 @@ router.get("/getAllByUserID/:userId", async (req: Request, res: Response) => {
   }
 });
 
-router.post("/", async (req: Request, res: Response) => {
+app.post("/", async (req: Request, res: Response) => {
   try {
     const newRecordBody = req.body;
     const newRecord = new FinancialRecordModel(newRecordBody);
@@ -28,7 +28,7 @@ router.post("/", async (req: Request, res: Response) => {
   }
 });
 
-router.put("/:id", async (req: Request, res: Response) => {
+app.put("/:id", async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
     const newRecordBody = req.body;
@@ -46,7 +46,7 @@ router.put("/:id", async (req: Request, res: Response) => {
   }
 });
 
-router.delete("/:id", async (req: Request, res: Response) => {
+app.delete("/:id", async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
     const record = await FinancialRecordModel.findByIdAndDelete(id);
@@ -57,4 +57,4 @@ router.delete("/:id", async (req: Request, res: Response) => {
   }
 });
 
-export default router;
+export default app;
