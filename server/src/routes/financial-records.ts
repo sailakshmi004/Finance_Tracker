@@ -2,7 +2,10 @@ import express, { Request, Response } from "express";
 import FinancialRecordModel from "../schema/financial-record";
 
 const app = express.Router();
-
+app.get("/",(req,res)=>{
+  res.send({
+    message:"success to api"})
+}
 app.get("/getAllByUserID/:userId", async (req: Request, res: Response) => {
   try {
     const userId = req.params.userId;
