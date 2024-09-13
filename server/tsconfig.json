@@ -131,7 +131,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "types": ["node"], // Ensure this is included
-    "typeRoots": [ "./node_modules/@types", "../node_modules/@types", "../../node_modules/@types" ],
+   "typeRoots": ["node_modules/@types/node"],
     "target": "es6",
     "module": "commonjs",
     "outDir": "./dist"
